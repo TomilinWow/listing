@@ -19,6 +19,8 @@
   line-height: 33px;
   color: $colorText;
 
+  text-overflow: ellipsis;
+
   @media (max-width: 767px) {
     font-size: 15px;
     line-height: 23px;
@@ -81,6 +83,7 @@
   button {
     display: block;
   }
+
   display: flex;
   align-items: center;
   @media (max-width: 329px) {
