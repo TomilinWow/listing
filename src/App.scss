@@ -1,0 +1,85 @@
+@import 'scss/variables';
+
+html {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url(fonts/Avenir.otf);
+}
+
+@mixin font {
+  font-family: 'Avenir';
+  font-style: normal;
+}
+
+body {
+  @include font;
+  background-color: $background;
+}
+
+.wrapper {
+  position: absolute;
+  background: #FFFFFF;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+  top: 80px;
+  left: 80px;
+  right: 80px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    width: 1px;
+    height: 1px;
+
+    @media (min-width: 992px) and (max-width: 1360px) {
+      bottom: -40px;
+    }
+    @media (max-width: 991px) {
+      bottom: -20px;
+    }
+    @media (max-width: 480px) {
+      bottom: -10px;
+    }
+
+  }
+
+  @media (min-width: 992px) and (max-width: 1360px) {
+    top: 40px;
+    left: 40px;
+    right: 40px;
+  }
+
+  @media (max-width: 991px) {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+  }
+
+  @media (max-width: 480px) {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+  }
+}
+
+
+.content {
+  margin: 100px 100px 80px 100px;
+
+  @media (min-width: 992px) and (max-width: 1360px) {
+    margin: 50px 50px 40px 50px;
+  }
+
+  @media (max-width: 991px) {
+    margin: 50px;
+  }
+
+  @media (max-width: 767px) {
+    margin: 20px;
+  }
+
+}
