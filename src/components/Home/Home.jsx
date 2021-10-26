@@ -7,16 +7,16 @@ import {Filters} from "./Filters/Filters";
 
 
 const Home = () => {
-    const {cities, concerts, isFavourites} = useSelector(state => state.concert)
-    const {getConcerts, isFavouritesAC, isFavouriteAC} = useActions()
+    const {filterConcerts, concerts} = useSelector(state => state.concert)
+    const {getConcerts, isFavouriteAC} = useActions()
 
     useEffect(() => {
         getConcerts()
     }, [])
 
-    const setIsFavourites = (isFavourites) => {
-        isFavouritesAC(isFavourites)
-    }
+    useEffect(() => {
+        localStorage.setItem('concerts', JSON.stringify(concerts))
+    }, [concerts])
 
     const setIsFavourite = (idCard, isFavourite) => {
         isFavouriteAC(idCard, isFavourite)
@@ -24,13 +24,10 @@ const Home = () => {
 
     return <div>
         <h2 className="contentText">Event Listing</h2>
-        <Filters cities={cities}
-                 isFavourites={isFavourites}
-                 setIsFavourites={setIsFavourites}/>
-
+        <Filters/>
         <div className="grid">
-            {concerts.map(item => {
-                return <CardItem item={item} setIsFavourite={setIsFavourite}/>
+            {filterConcerts.map(item => {
+                return <CardItem key={item.id} item={item} setIsFavourite={setIsFavourite}/>
             })}
         </div>
     </div>
