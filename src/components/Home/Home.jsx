@@ -15,7 +15,9 @@ const Home = () => {
     }, [])
 
     useEffect(() => {
-        localStorage.setItem('concerts', JSON.stringify(concerts))
+        if (concerts !== []){
+            localStorage.setItem('concerts', JSON.stringify(concerts))
+        }
     }, [concerts])
 
     const setIsFavourite = (idCard, isFavourite) => {
