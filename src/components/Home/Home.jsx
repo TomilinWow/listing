@@ -15,7 +15,7 @@ const Home = () => {
     }, [])
 
     useEffect(() => {
-        if (concerts !== []){
+        if (concerts !== []) {
             localStorage.setItem('concerts', JSON.stringify(concerts))
         }
     }, [concerts])
@@ -27,11 +27,14 @@ const Home = () => {
     return <div>
         <h2 className="contentText">Event Listing</h2>
         <Filters/>
-        <div className="grid">
-            {filterConcerts.map(item => {
-                return <CardItem key={item.id} item={item} setIsFavourite={setIsFavourite}/>
-            })}
-        </div>
+        {filterConcerts.length !== 0
+            ? <div className="grid">
+                {filterConcerts.map(item => {
+                    return <CardItem key={item.id} item={item} setIsFavourite={setIsFavourite}/>
+                })}
+            </div>
+            : <div className="notFound">Not found :(</div>
+        }
     </div>
 }
 
