@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/listing/static/css/main.54dceb07.chunk.css",
-    "main.js": "/listing/static/js/main.ad2a714f.chunk.js",
-    "main.js.map": "/listing/static/js/main.ad2a714f.chunk.js.map",
+    "main.css": "/listing/static/css/main.9d9e5a21.chunk.css",
+    "main.js": "/listing/static/js/main.936607c1.chunk.js",
+    "main.js.map": "/listing/static/js/main.936607c1.chunk.js.map",
     "runtime-main.js": "/listing/static/js/runtime-main.6cb5b315.js",
     "runtime-main.js.map": "/listing/static/js/runtime-main.6cb5b315.js.map",
     "static/js/2.22898608.chunk.js": "/listing/static/js/2.22898608.chunk.js",
     "static/js/2.22898608.chunk.js.map": "/listing/static/js/2.22898608.chunk.js.map",
     "index.html": "/listing/index.html",
-    "static/css/main.54dceb07.chunk.css.map": "/listing/static/css/main.54dceb07.chunk.css.map",
+    "static/css/main.9d9e5a21.chunk.css.map": "/listing/static/css/main.9d9e5a21.chunk.css.map",
     "static/js/2.22898608.chunk.js.LICENSE.txt": "/listing/static/js/2.22898608.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/listing/static/media/Avenir.448d9b5f.otf",
     "static/media/filters.scss": "/listing/static/media/arrow.c381148f.svg",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.6cb5b315.js",
     "static/js/2.22898608.chunk.js",
-    "static/css/main.54dceb07.chunk.css",
-    "static/js/main.ad2a714f.chunk.js"
+    "static/css/main.9d9e5a21.chunk.css",
+    "static/js/main.936607c1.chunk.js"
   ]
 }
